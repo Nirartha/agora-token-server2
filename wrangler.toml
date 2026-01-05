@@ -1,0 +1,6 @@
+name = "agora-token-server2"
+main = "src/index.js"
+compatibility_date = "2025-11-17"
+compatibility_flags = [ "nodejs_compat" ]
+
+workers_dev = true
