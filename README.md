@@ -1,18 +1,24 @@
-# Agora RTC Token Server (Cloudflare Workers 版)
+# Agora RTC/RTM Token Server (Cloudflare Workers 版)
 
-A lightweight, serverless Agora RTC Token generator built on Cloudflare Workers. Supports the latest **Agora AccessToken2 (007 version)** protocol with high performance and global edge availability.
+A lightweight, serverless Agora RTC/RTM Token generator built on Cloudflare Workers. Supports the latest **Agora AccessToken2 (007 version)** protocol with high performance and global edge availability.
 
 這是一個基於 Cloudflare Workers 構建的輕量級 Agora RTC Token 產生伺服器。支援最新的 Agora 007 版本 Token 規範，具備高性能、低延遲且無需維護伺服器基礎設施的優點。
 
 ## 🚀 API Usage
 **Endpoint:** `GET https://<your-worker>.workers.dev/`
 
-**Parameters:**
+**RTC token Parameters:**
 - `channelName`: (Required) The name of the Agora channel.
 - `uid`: (Optional) User ID (Integer), defaults to `0`.
 
 **Example:**
 `GET https://<your-worker>.dev/?channelName=test&uid=12345`
+
+**RTM token Parameters:**
+- `userUuid`: (Required) The UID of the user.
+
+**Example:**
+`GET https://<your-worker>.dev/?userUuid=user_12345`
 
 ---
 
@@ -57,6 +63,8 @@ export const Role = {
     PUBLISHER: 1, // 對應 kPrivilegeJoinChannel (以及基本的發布權限)
     SUBSCRIBER: 2
 };
+
+export { ServiceRtm };
 ```
 
 
