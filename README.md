@@ -1,4 +1,4 @@
-# Agora RTC/RTM Token Server (Cloudflare Workers 版)
+# Agora RTC/RTM Token Server (Cloudflare Workers ver.)
 
 A lightweight, serverless Agora RTC/RTM Token generator built on Cloudflare Workers. Supports the latest **Agora AccessToken2 (007 version)** protocol with high performance and global edge availability.
 
