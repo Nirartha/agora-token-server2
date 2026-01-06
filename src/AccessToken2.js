@@ -412,3 +412,6 @@ export const Role = {
     PUBLISHER: 1, // 對應 kPrivilegeJoinChannel (以及基本的發布權限)
     SUBSCRIBER: 2
 };
+
+// 確保匯出了 ServiceRtm
+export { ServiceRtm };
